@@ -9,7 +9,7 @@
   <body>
     <div class="main w-full min-h-screen bg-zinc-900">
       <div class="form px-10 py-10 text-white">
-        <form action="create" method="post">
+        <form action="/create" method="post">
           <input
             class="block px-5 py-2 bg-zinc-800 rounded-md outline-none w-full"
             type="text"
@@ -37,7 +37,10 @@
                     <h1 class="text-white text-3xl tracking-tighter">
                         <%= val %>
                     </h1>
-                    <a href="/file/<%= val %>" class="text-blue-500 inline-block mt-3">Read More.</a>
+                    <div class="flex w-full justify-between items-center mt-4">
+                    <a href="/file/<%= val %>" class="text-blue-500 inline-block">Read More.</a>
+                    <a href="/edit/<%= val %>" class="text-zinc-600">Edit File</a>
+                  </div>
                   </div> 
             <% }) %>
         <% } else { %>
