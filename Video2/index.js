@@ -1,4 +1,5 @@
 const fs = require("fs");
+const http = require("http");
 // What to learn in fs ?
 // write file
 // appendfile
@@ -30,7 +31,13 @@ const fs = require("fs");
 //   else console.log("Delete Done");
 // });
 
-fs.rm("./lima", { recursive: true }, function (err) {
-  if (err) console.error(err);
-  else console.log("Removed ");
+// fs.rm("./lima", { recursive: true }, function (err) {
+//   if (err) console.error(err);
+//   else console.log("Removed ");
+// });
+
+const server = http.createServer(function (req, res) {
+  res.end("Hello world lima lima lima lima");
 });
+
+server.listen(3000)
