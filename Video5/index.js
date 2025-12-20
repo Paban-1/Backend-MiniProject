@@ -19,6 +19,10 @@ app.get("/profile/:userName", function (req, res) {
   res.send(`Welcome, ${req.params.userName}`);
 });
 
+app.get("/profile", function (req, res) {
+  res.render("Profile");
+});
+
 app.get("/author/:userName/:age", function (req, res) {
   res.send(`Welcome, ${req.params.userName} of age: ${req.params.age}`);
 });
